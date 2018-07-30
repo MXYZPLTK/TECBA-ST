@@ -1,39 +1,30 @@
 package com.TECBA.puntosdeinteres.demo;
 
-public class Admin {
-    private String name;
-    private String id;
-    private String rol;
+import java.util.ArrayList;
 
-    public Admin(String name, String id, String rol) {
-        this.name = name;
-        this.id = id;
-        this.rol = rol;
+public class Admin extends Cuenta {
+    String user;
+    String account;
+
+    public Admin(String name, int age, String email, String adress, int phone, String user, String account) {
+        super(name, age, email, adress, phone);
+        this.user = user;
+        this.account = account;
     }
 
-    public String getName() {
-        return name;
+    public String getUser() {
+        return user;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    public String getId() {
-        return id;
+    public String getAccount() {
+        return account;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAccount(String account) {
+        this.account = account;
     }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-
 }
