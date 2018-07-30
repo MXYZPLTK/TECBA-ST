@@ -6,6 +6,7 @@ public class Admin extends Cuenta {
     String user;
     String account;
 
+
     public Admin(String name, int age, String email, String adress, int phone, String user, String account) {
         super(name, age, email, adress, phone);
         this.user = user;
