@@ -1,6 +1,5 @@
 package com.TECBA.puntosdeinteres.demo;
 
-import java.util.ArrayList;
 
 public class Admin extends Cuenta {
     String user;
