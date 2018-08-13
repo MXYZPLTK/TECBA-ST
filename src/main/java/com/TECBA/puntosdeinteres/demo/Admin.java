@@ -1,30 +1,72 @@
 package com.TECBA.puntosdeinteres.demo;
 
 
+import java.util.ArrayList;
+
 public class Admin extends Cuenta {
-    String user;
-    String account;
+    String username;
+    String password;
+    ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
-
-    public Admin(String name, int age, String email, String adress, int phone, String user, String account) {
+    public Admin(String name, int age, String email, String adress, int phone, String username, String password) {
         super(name, age, email, adress, phone);
-        this.user = user;
-        this.account = account;
+        this.username = username;
+        this.password = password;
     }
 
-    public String getUser() {
-        return user;
+    public int createUser(Usuario user) {
+        listaUsuarios.add(user);
+        int size = listaUsuarios.size();
+        return size;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public Usuario readUser(String nombre){
+        String mensaje="";
+        ArrayList<Usuario> usuarioEncontrado = new ArrayList<Usuario>();
+        for(int i=0; i<listaUsuarios.size();i++) {
+            if (listaUsuarios.get(i).getName().equals(nombre)) {
+                usuarioEncontrado.add(listaUsuarios.get(i));
+            }
+        }
+        return usuarioEncontrado.get(0);
     }
 
-    public String getAccount() {
-        return account;
-    }
 
-    public void setAccount(String account) {
-        this.account = account;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

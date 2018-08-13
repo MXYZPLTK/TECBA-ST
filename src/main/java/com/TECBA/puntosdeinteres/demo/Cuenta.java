@@ -55,5 +55,4 @@ public class Cuenta {
         this.phone = phone;
     }
 
-
 }
