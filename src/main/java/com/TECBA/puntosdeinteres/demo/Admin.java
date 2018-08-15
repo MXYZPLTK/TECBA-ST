@@ -31,42 +31,18 @@ public class Admin extends Cuenta {
         return usuarioEncontrado.get(0);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public String updateUser(String userToUpdate, String name, String address) {
+        String newName = "";
+        for (int i = 0; i < listaUsuarios.size(); i++) {
+            if (listaUsuarios.get(i).getName().equals(userToUpdate)) {
+                listaUsuarios.get(i).setName(name);
+                listaUsuarios.get(i).setAdress(address);
+                newName = listaUsuarios.get(i).getName();
+            } else {
+                System.out.print("No existe el usuario");
+            }
+        }
+        return newName;
+    }
 
 }
