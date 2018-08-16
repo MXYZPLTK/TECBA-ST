@@ -45,7 +45,6 @@ public class Admin extends Cuenta {
         return newName;
     }
 
-<<<<<<< HEAD
     public String deleteUser(String user){
         String mensaje="";
         for(int i=0; i<listaUsuarios.size();i++){
@@ -58,6 +57,5 @@ public class Admin extends Cuenta {
         }
         return mensaje;
     }
-=======
->>>>>>> 36b0b9c130003bb45f8905ea898e4aba5f7f5887
+
 }
